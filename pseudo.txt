@@ -1,0 +1,28 @@
+What Is Pseudocode?
+Let's say that it's the middle of the week and you still haven't been able to write the source code you need for your latest software program. It seems every time you sit down at your computer to write, you are inundated with questions like: What is the syntax order? Should I use a brace or bracket? Where should the parenthesis go? Thoughts of format, syntax, and special characters crowd your mind, and you're unable to focus on the problem at hand. How do I get started? How can I sequence the program when I am so concerned over what source code syntax to use?
+Try this. Get up from your computer and go to a semi-secluded spot, taking only writing materials with you. The idea is to get away from the computer and plan your coding project instead of trying to write the syntax. Now, on the paper or whiteboard, transcribe your thoughts into sequential English-like statements, not worrying about syntax requirements, commas, brackets etc. Think of it this way: before you write a single line of C++ or Java programming code, write the algorithm in pseudocode.
+In computer programming, a software program is comprised of sequentially listed instructions designed to provide the desired output. We all have executed a series of instructions, perhaps not in a programming language like Java or C++, but in the form of an algorithm, basically a sequence of steps, that when followed, results in an output, like following the steps outlined in a cake recipe. Programmers, music writers, bakers, cooks, and many others use algorithms to organize and solve problems. In most instances, these algorithms could be considered pseudocode.
+
+What is the output of the code given below? 
+#include <stdio.h>
+int foo(int* a, int* b)
+{
+    int sum = *a + *b;
+    *b = *a;
+    return *a = sum - *b;
+}
+int main()
+{
+    int i = 0, j = 1, k = 2, l;
+    l = i++ || foo(&j, &k);
+    printf("%d %d %d %d", i, j, k, l);
+    return 0;
+}
+
+1 2 1 1
+1 1 2 1
+1 2 2 1
+1 2 2 2
+Solution: The control in the logical OR goes to the second expression only if the first expression results in FALSE. The function foo() is called because i++ returns 0(post-increment) after incrementing the value of i to 1. The foo() function actually swaps the values of two variables and returns the value of the second parameter. So, values of variables j and k get exchanged and OR expression evaluates to be TRUE.1 2 1 1
+
+  
